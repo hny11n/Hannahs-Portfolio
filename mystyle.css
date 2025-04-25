@@ -1,0 +1,715 @@
+@font-face {
+    font-family: Crevanttis;
+    src: url(Cervanttis.ttf);
+}
+/*Defining two color themes to enable theme switch*/
+:root{
+    --base-color: white;
+    --primary-variant: #393433;
+    --secondary-variant: #D9D9D9;
+    --text-color: #393433;
+    --headline-color: #ffde21;
+    --secondary-text: white;
+    --box-color: rgba(255, 222, 33, 0.7);
+    --button: #393433;
+    --button-text: white;
+} 
+.darkmode{
+    --base-color: #5E5E5E;
+    --primary-variant: #393433;
+    --secondary-variant: #ffde21;
+    --text-color: white;
+    --headline-color: white;
+    --secondary-text: white;
+    --box-color: rgba(255, 222, 33, 0.7);
+    --button: #ffde21;
+    --button-text: #393433;
+}
+
+*{
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    
+
+}
+/* Header and Navigation Bar */
+header {
+    position: fixed; /* Fixes the header to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Ensure the header is above other content */
+    background-color: var(--primary-variant);
+    padding: 10px 0; /* Optional padding for header */
+}
+
+nav {
+    height: 70px;
+    background-color: var(--primary-variant);
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the nav items vertically */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: var(--secondary-text);
+    padding: 30px;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffde21;
+}
+
+/* Main content (to prevent it from being hidden under the fixed header) */
+body {
+    margin: 0;
+    padding-top: 70px; /* Make space for the fixed header */
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full height for the layout */
+    color: var(--text-color);
+    background-color: var(--base-color);
+}
+
+
+/* Footer and Contact Section */
+footer {
+    background-color: var(--primary-variant);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0; 
+    margin-top: 30px;
+    z-index: 10;
+}
+
+#icons {
+    display: inline-block;
+    text-align: right;
+    position: absolute;
+    right: 10%;
+    bottom: 25px;
+}
+
+#icon {
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+footer img {
+    height: 40px;
+    width: 40px;
+}
+
+#contact {
+    text-align: left;
+    display: inline-block;
+    justify-content: center;
+    margin-right: 70%;
+    color: white;
+    
+}
+/*Theme Switch*/
+#theme-switch img:last-child{
+    display: none;
+}
+.darkmode #theme-switch img:first-child{
+    display: none;
+}
+.darkmode #theme-switch img:last-child{
+    display: inline-block;
+}
+/* Home Page */
+/* Aligning Text and Picture Section */
+
+#hello {
+    background-color: var(--box-color);
+    color: white;
+    width: 80%;
+    max-width: 500px;
+    height: 250px;
+    padding: 30px;
+    position: absolute; /* Absolute positioning for more control */
+    top: 65%; /* Center vertically */
+    left: 40%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for perfect vertical and horizontal centering */
+    z-index: 1; /* Ensures this is above the background image */
+}
+#hello h1{
+    padding-top: 15px;
+}
+#hello h2{
+    font-family: Crevanttis;
+    font-size: 50px;
+}
+#homeimg {
+    width: 100%;  /* Allow the image to scale responsively */
+    max-width: 650px; /* Limit the max width to 600px */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute; /* Absolute positioning to control placement */
+    top: 50%; /* Center vertically */
+    left: 60%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for perfect vertical and horizontal centering */
+    z-index: 0; /* Ensure it stays behind the text */
+}
+
+/* About Page */
+#about {
+    position: relative;
+    height: 180%;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+#about h1{
+    font-family: Crevanttis;
+    font-size: 50px;
+    color: var(--headline-color);
+}
+#introduction {
+    display: inline-block;
+    width: 30%;
+    position: absolute;
+    right: 15%;
+    top: 40%;
+}
+
+#yellowDiv {
+    height: 350px;
+    width: 350px;
+    background-color: var(--box-color);
+    position: absolute;
+    left: 21.5%;
+    top: 54%;
+    transform: translateY(-50%); /* Center vertically */
+    padding: 50px;
+}
+
+#aboutimg {
+    height: 450px;
+    position: absolute;
+    left: 20%;
+    top: 60%;
+    transform: translateY(-50%); /* Center vertically */
+    padding: 50px;
+}
+
+/* Button */
+#toProjects {
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    transform: translateY(-50%);
+    margin-top: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--button);
+    font-size: 14px;
+}
+
+#projectLink {
+    color: var(--button-text);
+    text-decoration: none;
+    padding: 40px;
+}
+
+#projectLink:hover {
+    color: var(--headline-color);
+}
+
+/* Skills Section */
+
+#skills {
+    background-color: var(--secondary-variant);
+    position: relative;
+    top: 20%;
+    padding: 20px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    color: #393433;
+}
+
+#skills div {
+    display: flex;
+    justify-content: space-around; /* Evenly spaces out the figure elements */
+    flex-wrap: wrap; /* Allow the items to wrap on smaller screens */
+    align-items: center; /* Center align the items vertically */
+}
+
+#skills figure {
+    display: flex;
+    flex-direction: column; /* Stack the image and caption vertically */
+    align-items: center; /* Center the image and caption horizontally */
+    text-align: center; /* Ensure the text is centered under the image */
+}
+
+#skills img {
+    height: 50px; 
+}
+
+/*CV Section*/
+
+#cv{
+    position: relative;
+    top: 10%;
+    height: 250%;
+    margin-bottom: 15px;
+}
+
+#resume {
+    display: inline-block;
+    width: 30%;
+    position: absolute;
+    right: 20%;
+    top: -10%;
+    color: var(--headline-color);
+    font-weight: bold;
+    font-size: 150px;
+    font-family: Crevanttis;
+}
+#work {
+    display: inline-block;
+    width: 50%;
+    position: absolute;
+    left: 20%;
+    top: 30%;
+}
+#work li {
+    padding-bottom: 20px;
+    list-style-type: square;
+}
+#work li::marker {
+    color: #ffde21;
+    font-size: 30px;
+}
+#education {
+    display: inline-block;
+    width: 50%;
+    position: absolute;
+    right: 0%;
+    top: 30%;
+}
+#education li {
+    padding-bottom: 20px;
+    list-style-type: square;
+}
+#education li::marker {
+    color: #ffde21;
+    font-size: 30px;
+}
+/*Projects Page*/
+#projectsPadding {
+
+    padding-bottom: 1200px;
+}
+
+#projects {
+    position: relative;
+    top: 5%;
+    height: 120%;
+  }
+  
+  #projects h1 {
+    text-align: center;
+    font-family: Crevanttis;
+    color: var(--headline-color);
+    font-size: 50px;
+  }
+  
+  #showcase {
+    margin-top: 35px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 250px);
+    place-content: center;
+  }
+
+  
+  #showcase img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  #showcase figure {
+    position: relative;
+    overflow: hidden; /* Ensure the overlay doesn't go outside the figure */
+  }
+  
+  #showcase figure::after {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--box-color); /* Yellow overlay */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
+    z-index: 1; /* Behind the caption but in front of the image */
+  }
+  
+  #showcase figure:hover::after {
+    opacity: 1; /* Show overlay on hover */
+  }
+  
+  #showcase figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #5E5E5E;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 2; /* Ensure the caption is above the overlay */
+    opacity: 0; /* Hide by default */
+    transition: opacity 0.3s ease; /* Smooth transition */
+  }
+  
+  #showcase figure:hover figcaption {
+    opacity: 1; /* Show caption on hover */
+  }
+  
+/* Button */
+#showmoreContainer {
+    display: flex;
+    justify-content: center; /* Horizontally center the button */
+    align-items: center; /* Vertically center the button */
+    width: 100%; /* Take up full width of the parent container */
+    position: relative; /* Keep it within normal flow */
+    margin-top: 40px; 
+}
+
+#showmore {
+    padding: 10px 40px;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--button);
+    font-size: 14px;
+    color: var(--button-text);
+    cursor: pointer;
+}
+#showmore:hover {
+    color: var(--headline-color);
+}
+
+/* Show More Function */
+#more {
+    display: none;
+}
+#more:checked ~ #showcase .showMoreContent{
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    gap: 10px;
+}
+.showMoreContent {
+    display: none;
+}
+
+#more:checked ~ #showmoreContainer label  {
+    display: none;
+}
+
+
+/*Showcase Individual Projects */
+
+#projectshowcase {
+    height: 250%;
+}
+
+
+#headerimg{
+    display: inline-block;
+}
+#headerimg img{
+    width: 60%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#projectshowcase h1{
+    width: 30%;
+    text-align: center;
+    font-family: Crevanttis;
+    color: var(--headline-color);
+    font-size: 50px;
+    position: absolute;
+    top: 95%;
+    left: 15%;
+    margin-top: 30px;
+}
+
+#projectshowcase p{
+    width: 35%;
+    position: absolute;
+    top: 115%;
+    left: 17%;
+    margin-top: 40px;
+}
+
+#yellowProject{
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    top: 97%;
+    right: 18%;
+    background-color: var(--box-color);
+
+}
+#projectsimg{
+    width: 400px;
+    position: absolute;
+    top: 102.5%;
+    right: 15%;
+}
+
+
+
+/*Responsive Design Mobile*/
+@media only screen and (max-width: 800px){
+    /* Header and Navigation Bar */
+
+nav {
+    height: 100px;
+}
+nav a {
+    padding: 15px;
+    font-size: 18px;
+}
+
+
+/* Main content (to prevent it from being hidden under the fixed header) */
+body {
+    margin: 0;
+    padding-top: 70px; /* Make space for the fixed header */
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full height for the layout */
+    color: var(--text-color);
+}
+
+/* Footer and Contact Section */
+footer {
+    padding: 25px;
+}
+
+#icon {
+
+    margin-left: 10px;
+}
+
+
+footer img {
+    height: 35px;
+    width: 35px;
+}
+
+#contact {
+    font-size: 14px;
+}
+/* Home Page */
+/* Aligning Text and Picture Section */
+
+#hello {
+    position: absolute; 
+    top: 75%;
+    left: 50%; 
+    right: 50%;
+    transform: translate(-50%, -50%); 
+}
+#hello h2{
+    font-size: 40px;
+}
+#homeimg {
+    width: 100%; 
+    max-width: 800px; 
+    height: auto; 
+    position: absolute; 
+    top: 45%; 
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+}
+/* About Page */
+#about {
+    height: 480%;
+    position: relative;
+    top: 105%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#introduction {
+    display: inline-block;
+    width: 75%;
+    position: absolute;
+    right: 15%;
+    top: 80%;
+
+}
+
+#yellowDiv {
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    left: 22%;
+
+}
+
+#aboutimg {
+    height: 350px;
+    position: absolute;
+    left: 20%;
+    top: 59%;
+}
+
+/* Skills Section */
+
+#skills {
+    background-color: var(--secondary-variant);
+    position: relative;
+    top: -80%;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+#skills img {
+    height: 30px; 
+}
+
+/*CV Section*/
+
+#cv{
+    position: relative;
+    top: -70%;
+    height: 330%;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+#resume {
+    position: absolute;
+    right: 35%;
+    top: 0%;
+    font-size: 80px;
+}
+#work {
+    display: inline-block;
+    width: 45%;
+    position: absolute;
+    left: 10%;
+    top: 20%;
+}
+#work li {
+    padding-left: 0px;
+
+}
+
+#education {
+    display: inline-block;
+    width: 45%;
+    position: absolute;
+    right: 0%;
+    top: 20%;
+}
+#education li {
+    padding-left: 0px;
+
+}
+
+/*Projects Page*/
+
+#projects {
+    position: relative;
+    top: 12%;
+  }
+
+  #showcase {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 225px);
+  }
+  
+  #showcase img {
+    width: 225px;
+    height: 225px;
+  }
+
+  #more:checked ~ #showcase .showMoreContent{
+    display: grid;
+    grid-template-columns: repeat(2, 225px);
+    gap: 10px;
+  }
+
+
+/*Showcase Individual Projects */
+
+#projectshowcase {
+    height: 250%;
+}
+
+
+#headerimg{
+    display: inline-block;
+}
+#headerimg img{
+    width: 100%;
+    position: absolute;
+    top: 35%;
+}
+
+#projectshowcase h1{
+    width: 100%;
+    text-align: center;
+    font-family: Crevanttis;
+    color: var(--headline-color);
+    font-size: 30px;
+    position: absolute;
+    top: 55%;
+    left: 0%;
+}
+
+#projectshowcase p{
+    width: 80%;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#yellowProject{
+    width: 300px;
+    height: 375px;
+    position: absolute;
+    top: 95%;
+    right: 22%;
+    background-color: var(--box-color);
+
+}
+#projectsimg{
+    width: 300px;
+    position: absolute;
+    top: 100%;
+    right: 15%;
+}
+}
