@@ -485,15 +485,15 @@ footer img {
 
 
 /*Responsive Design Mobile*/
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 1500px){
     /* Header and Navigation Bar */
 
 nav {
-    height: 100px;
+    height: 150px;
 }
 nav a {
     padding: 15px;
-    font-size: 18px;
+    font-size: 30px;
 }
 
 
@@ -509,7 +509,7 @@ body {
 
 /* Footer and Contact Section */
 footer {
-    padding: 25px;
+    padding: 50px;
 }
 
 #icon {
@@ -519,32 +519,34 @@ footer {
 
 
 footer img {
-    height: 35px;
-    width: 35px;
+    height: 50px;
+    width: 50px;
 }
 
 #contact {
-    font-size: 14px;
+    font-size: 25px;
 }
 /* Home Page */
 /* Aligning Text and Picture Section */
 
 #hello {
     position: absolute; 
-    top: 75%;
+    top: 64%;
     left: 50%; 
     right: 50%;
     transform: translate(-50%, -50%); 
+    width: 80%;
+    max-width: 1000px;
 }
 #hello h2{
-    font-size: 40px;
+    font-size: 55px;
 }
 #homeimg {
     width: 100%; 
-    max-width: 800px; 
+    max-width: 2000px; 
     height: auto; 
     position: absolute; 
-    top: 45%; 
+    top: 40%; 
     left: 50%;
     right: 50%;
     transform: translate(-50%, -50%);
@@ -553,7 +555,7 @@ footer img {
 #about {
     height: 480%;
     position: relative;
-    top: 105%;
+    top: 180%;
     left: 50%;
     right: 50%;
     transform: translate(-50%, -50%);
@@ -563,24 +565,30 @@ footer img {
     display: inline-block;
     width: 75%;
     position: absolute;
-    right: 15%;
-    top: 80%;
+    right: 10%;
+    top: 90%;
 
+}
+#introduction h1 {
+    font-size: 70px;
 }
 
 #yellowDiv {
-    height: 250px;
-    width: 250px;
+    height: 400px;
+    width: 400px;
     position: absolute;
-    left: 22%;
+    left: 20%;
 
 }
 
 #aboutimg {
-    height: 350px;
+    height: 500px;
     position: absolute;
     left: 20%;
     top: 59%;
+}
+#toProjects {
+    font-size: 25px;
 }
 
 /* Skills Section */
@@ -588,30 +596,30 @@ footer img {
 #skills {
     background-color: var(--secondary-variant);
     position: relative;
-    top: -80%;
-    font-size: 10px;
+    top: 70%;
+    font-size: 15px;
     margin-bottom: 10px;
 }
 
 #skills img {
-    height: 30px; 
+    height: 50px; 
 }
 
 /*CV Section*/
 
 #cv{
     position: relative;
-    top: -70%;
+    top: 130%;
     height: 330%;
-    font-size: 14px;
+    font-size: 20px;
     margin-bottom: 15px;
 }
 
 #resume {
     position: absolute;
-    right: 35%;
-    top: 0%;
-    font-size: 80px;
+    right: 30%;
+    top: -15%;
+    font-size: 150px;
 }
 #work {
     display: inline-block;
@@ -641,23 +649,32 @@ footer img {
 
 #projects {
     position: relative;
-    top: 12%;
+    top: 7%;
   }
-
-  #showcase {
+#projects h1{
+    font-size: 70px;
+}
+#showcase {
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(2, 225px);
+    grid-template-columns: repeat(2, 500px);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 30px;
   }
-  
-  #showcase img {
-    width: 225px;
-    height: 225px;
+#showcase figcaption {
+    font-size: 35px;
+}
+#showcase img {
+    width: 500px;
+    height: 500px;
   }
-
+#showmore{
+    font-size: 30px;
+}
   #more:checked ~ #showcase .showMoreContent{
     display: grid;
-    grid-template-columns: repeat(2, 225px);
+    grid-template-columns: repeat(2, 500px);
     gap: 10px;
   }
 
@@ -665,7 +682,7 @@ footer img {
 /*Showcase Individual Projects */
 
 #projectshowcase {
-    height: 250%;
+    height: 100%;
 }
 
 
@@ -675,7 +692,7 @@ footer img {
 #headerimg img{
     width: 100%;
     position: absolute;
-    top: 35%;
+    top: 32%;
 }
 
 #projectshowcase h1{
@@ -683,33 +700,36 @@ footer img {
     text-align: center;
     font-family: Crevanttis;
     color: var(--headline-color);
-    font-size: 30px;
+    font-size: 70px;
     position: absolute;
-    top: 55%;
+    top: 50%;
     left: 0%;
 }
 
 #projectshowcase p{
-    width: 80%;
+    width: 35%;
     position: absolute;
-    top: 75%;
-    left: 50%;
+    top: 70%;
+    left: 25%;
     transform: translate(-50%, -50%);
+    font-size: 20px;
 }
+
 
 #yellowProject{
     width: 300px;
     height: 375px;
     position: absolute;
-    top: 95%;
-    right: 22%;
+    top: 63%;
+    right: 20%;
     background-color: var(--box-color);
 
 }
 #projectsimg{
     width: 300px;
     position: absolute;
-    top: 100%;
+    top: 65%;
     right: 15%;
 }
+
 }
